@@ -13,10 +13,10 @@ client = OpenAI(
 )
 
 # Streamlit app title
-st.title("Joke Explainer")
+st.title("Let me explain you the joke..")
 
 # Text box for the user to input a joke
-joke_input = st.text_area("Enter your joke here:")
+joke_input = st.text_area("Tell me your joke:")
 
 # Submit button to send the joke to the OpenAI API
 if st.button("Submit"):
@@ -35,9 +35,7 @@ if st.button("Submit"):
             )
             
             # Extract the assistant's reply
-            explanation = response.choices[0].message.content
-            
-            
+            explanation = response.choices[0].message.content         
             
             # Display the explanation
             st.header("Joke Explanation")
